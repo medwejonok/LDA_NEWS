@@ -28,13 +28,13 @@ for text in tokenized_texts:
 corpus = [dictionary.doc2bow(text) for text in tokenized_texts]
 ```
 
-> Я убрал самые популярные слова, которые есть почти во всех новостях
+ Я убрал самые популярные слова, которые есть почти во всех новостях
 
 ## 2. Обучение модели LDA на gensim
 ```python
 lda_model = LdaModel(corpus=corpus, id2word=dictionary, num_topics=3)
 ```
-> Путем визуального анализа, я понял, что лучшее число **num_topics** должно равняться 3
+ Путем визуального анализа, я понял, что лучшее число **num_topics** должно равняться 3
 
 ## 3. Посчитать метрику и визуализировать результат
 > Я выбрал метрику UMass
